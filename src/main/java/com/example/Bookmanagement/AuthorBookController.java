@@ -25,7 +25,7 @@ public class AuthorBookController {
 
     }
 
-    @PostMapping("/connectAuthors")
+    @PutMapping("/connectAuthors")
     public String connectAuthor(){
         return authorBookService.connectAuthor();
     }

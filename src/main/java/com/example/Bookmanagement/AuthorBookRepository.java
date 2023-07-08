@@ -36,6 +36,7 @@ public class AuthorBookRepository {
             Book book = BooksDB.get(key);
             Author author = AuthorsDB.get(book.getAuthor_name());
             book.setAuthor(author);
+            System.out.println(book.getAuthor_name());
         }
         return "Connecting Authors completed";
     }
@@ -64,8 +65,7 @@ public class AuthorBookRepository {
     public List<Book> booksFilter(int rate) {
         List<Book> bookAuthors = new ArrayList<>();
         for(String key : BooksDB.keySet()){
-            Author author = BooksDB.get(key).author;
-            if(author.getRating()>rate) bookAuthors.add(BooksDB.get(key));
+            bookAuthors.add(BooksDB.get(key));
         }
         return bookAuthors;
     }

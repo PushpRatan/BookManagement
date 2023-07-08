@@ -9,9 +9,10 @@ public class Book {
 
     Author author;
 
-    public Book(String bookname, int pages) {
+    public Book(String bookname, int pages, String author_name) {
         this.bookname = bookname;
         this.pages = pages;
+        this.Author_name = author_name;
     }
 
     public String getBookname() {
